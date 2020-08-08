@@ -62,7 +62,6 @@
         .diary__text
           今日はいい天気ですね
   .main__footer
-    .main__footer--post
-      日記を書く
-    .main__footer--calender
-      カレンダー
+    .main__footer
+      = link_to "日記を書く", "diaries/new", class: "main__footer--post"
+      = link_to "カレンダー", "#", class: "main__footer--calender"

@@ -76,16 +76,19 @@
     line-height: 100px;
     text-align: center;
     font-size: 20px;
-    color: #AAAAAA;
     &--post{
       width: 50%;
       box-shadow: inset 1px 1px 10px 0 rgba(0, 0, 0, .5);
       cursor: pointer;
+      text-decoration: none;
+      color: #AAAAAA;
     }
     &--calender{
       width: 50%;
       box-shadow: inset 1px 1px 10px 0 rgba(0, 0, 0, .5);
       cursor: pointer;
+      text-decoration: none;
+      color: #AAAAAA;
     }
   }
 }
