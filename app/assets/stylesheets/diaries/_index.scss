@@ -41,16 +41,11 @@
           text-align: center;
           border-right: 1px solid black;
           color:#FF9872;
-          &--diary-year{
-            
-          }
           &--diary-day{
             display: flex;
             justify-content: center;
             .text-date{
               margin: 0 5px;
-            }
-            .text-week{
             }
           }
           &--diary-time{

@@ -17,11 +17,16 @@
     }
   }
   &__post-area{
-    height: 650px;
+    height: 600px;
     padding: 30px;
     textarea{
       height: 100%;
       width: 100%;
+    }
+    .btn{
+      height: 50px;
+      width: 100%;
+      box-shadow: inset 1px 1px 10px 0 rgba(0, 0, 0, .5);
     }
   }
 }
