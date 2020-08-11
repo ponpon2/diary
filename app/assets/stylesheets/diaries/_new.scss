@@ -10,7 +10,7 @@
     &--post-date{
       margin: 0 auto;
     }
-    &__image{
+    &--image{
       font-size: 30px;
       padding-right: 20px;
       cursor: pointer;
@@ -19,8 +19,8 @@
   &__post-area{
     height: 600px;
     padding: 30px;
-    textarea{
-      height: 100%;
+    .text-box{
+      height: 560px;
       width: 100%;
     }
     .btn{

@@ -1,0 +1,10 @@
+.post-main
+  .post-main__post-header
+    .post-main__post-header--post-date
+      2020年8月1日(月)
+    .post-main__post-header--image
+      = icon 'fas', 'camera-retro'
+  .post-main__post-area
+    = form_with(model: @diary, local: true) do |f|
+      = f.text_area :text, class: "text-box"
+      = f.submit "投稿する", class: "btn"
