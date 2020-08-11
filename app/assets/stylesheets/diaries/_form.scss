@@ -1,0 +1,50 @@
+.diary-box{
+  width: 1000px;
+  margin: 25px auto;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, .5);
+  background-color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  &__date{
+    margin: 20px 10px;
+    color:#FF9872;
+    &--diary-day{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .text-date{
+        font-size: 20px;
+      }
+      .text-week{
+        font-size: 10px;
+      }
+    }
+    &--diary-time{
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+  &__text{
+    border-left: 2px solid black;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    &--delete{
+      text-align: right;
+      margin-top: 20px;
+      width: 100%;
+      .delete-btn{
+        cursor: pointer;
+        color: #AAAAAA;
+        font-size: 20px;
+      }
+    }
+  }
+}
+.link{
+  text-decoration: none;
+  color: black;
+}
