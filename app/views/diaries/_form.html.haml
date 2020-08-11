@@ -1,0 +1,17 @@
+.diary-box
+  = link_to "diaries/#{diary.id}/edit", class: "link" do
+    .diary-box__date
+      .diary-box__date--diary-year
+        = diary.created_at.strftime('%Y/%m')
+      .diary-box__date--diary-day
+        .text-date
+          = diary.created_at.strftime('%d')
+        .text-week
+          = diary.created_at.strftime('(%a)')
+      .diary-box__date--diary-time
+        = diary.created_at.strftime('%H:%M')
+    .diary-box__text
+      = diary.text
+      .diary-box__text--delete
+        = link_to "diaries/#{diary.id}", class: "delete-btn", method: :delete do
+          = icon 'fas', 'trash'

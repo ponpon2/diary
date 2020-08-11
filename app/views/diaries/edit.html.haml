@@ -1,10 +1,10 @@
 .post-main
   .post-main__post-header
     .post-main__post-header--post-date
-      = Date.current.strftime('%Y年 %m月 %d日 (%a)')
+      = @diary.created_at.strftime('%Y年 %m月 %d日 (%a)')
     .post-main__post-header--image
       = icon 'fas', 'camera-retro'
   .post-main__post-area
     = form_with(model: @diary, local: true) do |f|
       = f.text_area :text, class: "text-box"
-      = f.submit "投稿する", class: "btn"
+      = f.submit "編集する", class: "btn"
