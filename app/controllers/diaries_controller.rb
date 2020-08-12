@@ -34,7 +34,7 @@ class DiariesController < ApplicationController
       end
       redirect_to root_path
     else
-      render :edit, alert: '日記を変更できませんでした'
+      redirect_to root_path
     end
   end
 

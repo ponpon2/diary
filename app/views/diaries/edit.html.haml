@@ -4,12 +4,11 @@
       = @diary.created_at.strftime('%Y年 %m月 %d日 (%a)')
   .post-main__post-area
     = form_with(model: @diary, local: true) do |f|
-      = f.text_area :text, class: "text-box"
       .previews
         - if @diary.persisted?
           - @diary.images.each do |img, i|
             .previews__img-box
-              = image_tag img.src.url, data: {index: i}, class: "preview-image"
-              .preview-btn
-                削除
-      = f.submit "編集する", class: "btn"
+              = image_tag "#{img.src}", class: "preview-image"
+      = f.text_area :text, class: "text-box"
+      .hidden-content
+        = f.submit "編集する", class: "btn"
