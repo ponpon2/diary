@@ -7,20 +7,31 @@ class DiariesController < ApplicationController
 
   def new
     @diary = Diary.new
+    @images = @diary.images.build
   end
   
   def create
     @diary = Diary.create(diary_params)
     if @diary.save
-      redirect_to root_path
-    else
-      render :new, alert: '日記を投稿できませんでした'
+      if params[:images].present?
+        # フォームで入力されたファイルを一つずつレコードに格納していく
+        params[:images][:src].each do |a|
+          @image = @diary.images.create!(src: a, diary_id: @diary.id)
+        end
+      end
+        redirect_to root_path
+      else
+        render :new, alert: '日記を投稿できませんでした'
     end
   end
 
   def update
-
     if @diary.update(diary_params)
+      if params[:images].present?
+        params[:images][:src].each do |a|
+          @image = @diary.images.update!(src: a, diary_id: @diary.id)
+        end
+      end
       redirect_to root_path
     else
       render :edit, alert: '日記を変更できませんでした'
@@ -41,7 +52,7 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:text)
+    params.require(:diary).permit(:text, images_attributes: [:src])
   end
 
   def set_diary
