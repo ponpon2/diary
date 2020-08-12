@@ -2,8 +2,6 @@
   %ul.main__header
     %li.main__header--title
       日記
-    %li.main__header--search
-      = icon 'fas', 'search'
   .main__diaries
     - if @diary.present?
       = render partial: 'form', collection: @diary, as: "diary"
@@ -13,4 +11,4 @@
   .main__footer
     .main__footer
       = link_to "日記を書く", "diaries/new", class: "main__footer--post"
-      = link_to "カレンダー", "#", class: "main__footer--calender"
+      

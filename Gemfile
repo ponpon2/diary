@@ -60,3 +60,6 @@ gem 'jquery-rails'
 gem 'rename'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+gem "simple_calendar", "~> 2.0"
