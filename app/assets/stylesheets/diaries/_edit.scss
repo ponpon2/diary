@@ -1,0 +1,19 @@
+.previews{
+  display: flex;
+  &__img-box{
+    margin: 5px;
+    .preview-image{
+      width: 150px;
+      height: 100px;
+      margin: 5px;
+      object-fit: contain;
+    }
+    .preview-btn{
+      text-align: center;
+      width: 150px;
+      margin: 0 auto;
+      box-shadow: inset 1px 1px 10px 0 rgba(0, 0, 0, .5);
+      background-color: #eeeeee;
+    }
+  }
+}

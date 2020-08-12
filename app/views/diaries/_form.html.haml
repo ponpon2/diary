@@ -11,7 +11,11 @@
       .diary-box__date--diary-time
         = diary.created_at.strftime('%H:%M')
     .diary-box__text
-      = diary.text
+      .text-box
+        = diary.text
+          - if diary.images.present?
+          .text-box__images
+            = image_tag "#{diary.images.first.src.url}", class: "src"
       .diary-box__text--delete
         = link_to "diaries/#{diary.id}", class: "delete-btn", method: :delete do
           = icon 'fas', 'trash'
