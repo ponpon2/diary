@@ -26,3 +26,9 @@ test:
 development:
   <<: *default
   database: journal_development
+
+production:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
