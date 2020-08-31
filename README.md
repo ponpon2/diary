@@ -59,7 +59,7 @@ URL: https://aqueous-atoll-30025.herokuapp.com/
 
 
 | Column	 |   Type    |   Options                        |
-|:---------|:-------- :|:--------------------------------:|
+|:--------:|:---------:|:--------------------------------:|
 | src      | string    | null:false                       |
 | diary_id | references| null: false, foreign_key: true   |
 
